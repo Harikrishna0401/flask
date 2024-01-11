@@ -15,8 +15,8 @@ steps:
     - 'instance-with-cloud-build'
     - '--image'
     - 'gcr.io/$PROJECT_ID/instance-with-cloud-build:$COMMIT_SHA'
-    - '--REGION'
-    - 'asia-south1'
+    # - '--REGION'
+    # - 'asia-south1'
     - '--zone'
     - 'asia-south1-c'
 images:
