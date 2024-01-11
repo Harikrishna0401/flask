@@ -13,7 +13,7 @@ steps:
     - 'instances'
     - 'update'
     - 'instance-with-cloud-build'
-    - '--image'
+    - '--container-image'
     - 'gcr.io/$PROJECT_ID/instance-with-cloud-build:$COMMIT_SHA'
     # - '--REGION'
     # - 'asia-south1'
