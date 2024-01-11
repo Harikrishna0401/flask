@@ -10,6 +10,7 @@ steps:
     entrypoint: gcloud
     args:
     - 'compute'
+    - 'instances'
     - 'deploy'
     - 'instance-with-cloud-build'
     - '--image'
