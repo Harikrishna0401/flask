@@ -11,7 +11,7 @@ steps:
     args:
     - 'compute'
     - 'instances'
-    - 'deploy'
+    - 'create-with-container'
     - 'instance-with-cloud-build'
     - '--image'
     - 'gcr.io/$PROJECT_ID/instance-with-cloud-build:$COMMIT_SHA'
