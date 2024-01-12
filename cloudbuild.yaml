@@ -1,10 +1,10 @@
 steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/instance-with-cloud-build/$COMMIT_SHA', '.']
+    args: ['build', '-t', 'us-docker.pkg.dev/$PROJECT_ID/$COMMIT_SHA', '.']
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-east1-docker.pkg.dev/$PROJECT_ID/instance-with-cloud-build/$COMMIT_SHA']
+    args: ['push', 'us-docker.pkg.dev/$PROJECT_ID/$COMMIT_SHA']
   # Deploy container image to Compute Engine
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
@@ -16,7 +16,7 @@ steps:
     - '--image-project'
     - 'my-cluster-project-407509'
     - '--container-image'
-    - 'us-east1-docker.pkg.dev/$PROJECT_ID/instance-with-cloud-build/$COMMIT_SHA'
+    - 'us-docker.pkg.dev/$PROJECT_ID/$COMMIT_SHA'
     - '--machine-type'
     - 'e2-medium'
     # - '--REGION'
@@ -24,4 +24,4 @@ steps:
     - '--zone'
     - 'asia-south1-c'
 images:
-  - 'us-east1-docker.pkg.dev/$PROJECT_ID/instance-with-cloud-build/$COMMIT_SHA'
+  - 'us-docker.pkg.dev/$PROJECT_ID/$COMMIT_SHA'
