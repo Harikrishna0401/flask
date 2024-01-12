@@ -15,7 +15,7 @@ steps:
     - 'instance-with-cloud-build'
     - '--image-project'
     - 'my-cluster-project-407509'
-    - '--container-image'
+    - '--image'
     - 'us-central1-docker.pkg.dev/$PROJECT_ID/instance-with-cloud-build/instance-image:$COMMIT_SHA'
     - '--machine-type'
     - 'e2-medium'
